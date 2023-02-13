@@ -5,8 +5,7 @@ export default function Home() {
   const [liste, setListe] = useState([]);
   const [element, setElement] = useState("");
   const [quantity , setQuantity] = useState(0);
-  const [index, setIndex] = useState(-1);
-  const [link, setLink] = useState("https://esilv.olfsoftware.fr/td5/register"); 
+  const [index, setIndex] = useState(-1); 
   const [id, setId] = useState("");
   const deleteItem = index => {
     const updatedListe = [...liste];
@@ -38,7 +37,7 @@ export default function Home() {
     setListe([]);
     try{
     const handleClick = await
-    fetch(link)
+    fetch("https://esilv.olfsoftware.fr/td5/register")
       .then((result) => result.json())
       .then((get) => {
       setId(get.id);
